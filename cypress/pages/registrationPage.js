@@ -1,7 +1,7 @@
 class RegistrationPage {
   visit() {
-    cy.visit('https://automationexercise.com/login');
-    cy.title().should('eq', 'Automation Exercise - Signup / Login');
+    cy.visit('https://automationexercise.com/login')
+    cy.title().should('eq', 'Automation Exercise - Signup / Login')
   }
 
   fillSignupForm(user) {

@@ -1,6 +1,7 @@
 import { faker } from '@faker-js/faker'
 import RegistrationPage from '../pages/registrationpage'
 
+
 describe('login/registration', () => {
   const user = {
     name: faker.name.firstName(),
@@ -19,6 +20,11 @@ describe('login/registration', () => {
     RegistrationPage.visit()
     RegistrationPage.fillSignupForm(user)
     RegistrationPage.fillRegistrationForm(user)
+    
     // RegistrationPage.verifyLoggedIn(user)
+
+    cy.getCookies().then((cookies) => {
+      cy.writeFile('cypress/fixtures/sessionCookies.json', cookies)
+    })
   })
 })
