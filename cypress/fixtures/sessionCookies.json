@@ -1,53 +1,53 @@
 [
   {
     "name": "sessionid",
-    "value": "nvi78cnitprlg8gznb37gqagrp81cdoi",
+    "value": "0boyszh2bi6ue9gs3p0wj1h5tlp6gy17",
     "path": "/",
     "secure": false,
     "hostOnly": true,
     "httpOnly": true,
-    "expiry": 1748346344.194,
+    "expiry": 1748362368.367,
     "domain": "automationexercise.com",
     "sameSite": "lax"
   },
   {
     "name": "__eoi",
-    "value": "ID=24080a574a2d3f3f:T=1747136735:RT=1747136735:S=AA-Afja_t6IVTE5e-6bs3PDUSWrH",
+    "value": "ID=04e6d491e8651ad4:T=1747152762:RT=1747152762:S=AA-Afjaym8933CbMyOvYDjtmxiil",
     "path": "/",
     "secure": true,
     "httpOnly": false,
-    "expiry": 1762688735,
+    "expiry": 1762704762,
     "domain": ".automationexercise.com",
     "sameSite": "no_restriction"
   },
   {
     "name": "csrftoken",
-    "value": "lx3Cua6dskBCsMpIg3GI7ZNWvP0HFMIXUvb61bbSMbQebzH5htRJlirEriYpIY7M",
+    "value": "x3OHWkL5qA1VKTBpvojD2MfIqeSs7fLGeDlyY9cjQMrRXGX68awf8I0WKzu9JEka",
     "path": "/",
     "secure": false,
     "hostOnly": true,
     "httpOnly": false,
-    "expiry": 1778586344.623594,
+    "expiry": 1778602368.723563,
     "domain": "automationexercise.com",
     "sameSite": "lax"
   },
   {
     "name": "__gads",
-    "value": "ID=9dd9e7a2a110facc:T=1747136735:RT=1747136735:S=ALNI_MbbKI_4qCGdzecn_LBZ71OjzozSrw",
+    "value": "ID=e49c04cf732a4fca:T=1747152762:RT=1747152762:S=ALNI_MbFRXW93z1xH8gMU_aiksM3o1dYGw",
     "path": "/",
     "secure": true,
     "httpOnly": false,
-    "expiry": 1780832735,
+    "expiry": 1780848762,
     "domain": ".automationexercise.com",
     "sameSite": "no_restriction"
   },
   {
     "name": "__gpi",
-    "value": "UID=000010c028e431bf:T=1747136735:RT=1747136735:S=ALNI_MbN1V5adkVdnsh0jP57ShhWvucrbQ",
+    "value": "UID=000010c05293782d:T=1747152762:RT=1747152762:S=ALNI_MamXt04kg3JPw0O5XxdGyGYREeWHw",
     "path": "/",
     "secure": true,
     "httpOnly": false,
-    "expiry": 1780832735,
+    "expiry": 1780848762,
     "domain": ".automationexercise.com",
     "sameSite": "no_restriction"
   }

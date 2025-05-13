@@ -1,6 +1,6 @@
 class RegistrationPage {
   visit() {
-    cy.visit('https://automationexercise.com/login')
+    cy.visit('/login')
     cy.title().should('eq', 'Automation Exercise - Signup / Login')
   }
 

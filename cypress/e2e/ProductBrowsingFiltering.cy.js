@@ -2,7 +2,7 @@ describe('Product Browsing & Filtering Test',()=>{
 
   it('filter products by Women',()=>{
       // Step 1: Visit the website
-      cy.visit('https://automationexercise.com');  
+      cy.visit('/');  
       cy.get('a[href="/products"]').click();                                  //this command helps to lunch url.
       
       // Click on Category >Women > Dress
