@@ -2,7 +2,7 @@ describe('Login User',()=>{
 let user;
 
 before(()=>{
-  cy.fixture('user').then((data) => {
+  cy.fixture('User').then((data) => {
     user = data;
   });
 })

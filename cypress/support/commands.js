@@ -1,4 +1,5 @@
 import LoginPage from "../pages/LoginPage";
+import LogOutPage from "../pages/LogoutPage";
 import SignupPage from "../pages/SignupPage"
 
 
@@ -25,6 +26,11 @@ Cypress.Commands.add('login',(email,password)=>{
   loginpage.fillupEmail(email);
   loginpage.fillupPassword(password);
   loginpage.submit('login-button');
+});
 
-
-})
+//Logout Command
+Cypress.Commands.add('logout',()=>{
+  const logoutpage =new LogOutPage();
+  logoutpage.visit();
+  logoutpage.logoutbutton();
+});

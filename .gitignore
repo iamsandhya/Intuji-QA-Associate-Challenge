@@ -1,4 +1,4 @@
 node_modules/
 
 cypress/fixtures/SessionCookies.json
-cypress/fixtures/user.json
+cypress/fixtures/User.json

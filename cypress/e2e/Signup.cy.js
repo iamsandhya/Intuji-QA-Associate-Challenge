@@ -26,9 +26,13 @@ describe('User Signup', () => {
   it('should register a new user successfully', () => {
     cy.signup(user);
 
-    // 
+    // Save session cookies
     cy.getCookies().then((cookies) => {
       cy.writeFile('cypress/fixtures/SessionCookies.json', cookies);
-    })
-  })
+    });
+
+    // Save generated user data to fixture
+  cy.writeFile('cypress/fixtures/User.json', user);
+});
+  
 })
