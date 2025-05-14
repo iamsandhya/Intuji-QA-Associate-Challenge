@@ -1,7 +1,7 @@
 class SignupPage {
   visit() {
     cy.visit('/login')
-    cy.title().should('eq', 'Automation Exercise - Signup / Login')
+    cy.title().should('eq', 'Automation Exercise - Signup / Login');
   }
 
   fillSignupForm(user) {
@@ -37,7 +37,9 @@ class SignupPage {
   submit(buttonId) {
     cy.get(`button[data-qa='${buttonId}']`).click();
   }
-
+  clickContinue(continuebuttonId){
+  cy.get(`a[data-qa='${continuebuttonId}']`).click();
+}
 }
 
 export default SignupPage;
