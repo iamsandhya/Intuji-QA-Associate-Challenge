@@ -1,6 +1,6 @@
-import LoginPage from "../pages/LoginPage";
-import LogOutPage from "../pages/LogoutPage";
-import SignupPage from "../pages/SignupPage"
+import LoginPage from "../pages/AuthPage/LoginPage";
+import LogOutPage from "../pages/AuthPage/LogoutPage";
+import SignupPage from "../pages/AuthPage/SignupPage"
 
 
 
