@@ -1,22 +1,12 @@
-import { faker } from '@faker-js/faker';
+import SignupPage from '../../pages/AuthPage/SignupPage';
 
 describe('User Signup', () => {
   let user;
 
    // Runs once before all tests in the block- generates the user object only once.
   before(()=>{
-    user = {
-      name: faker.person.firstName(),
-      email: faker.internet.email(),
-      password: faker.internet.password(),
-      firstName: faker.person.firstName(),
-      lastName: faker.person.lastName(),
-      address: faker.location.streetAddress(),
-      state: faker.location.state(),
-      city: faker.location.city(),
-      zip: faker.location.zipCode(),
-      phone: faker.phone.number()
-    }
+    const signupPage = new SignupPage();
+    user = signupPage.generaterUserFakerInfo();
   })
   
   // Runs before every it() block — visits the registration page before each test.

@@ -1,39 +1,29 @@
-import { faker } from '@faker-js/faker';
+import SignupPage from '../../pages/AuthPage/SignupPage';
 
 describe('Auth Flow', () => {
   let user;
 
   before(() => {
-    user = {
-      name: faker.person.firstName(),
-      email: faker.internet.email(),
-      password: faker.internet.password(),
-      firstName: faker.person.firstName(),
-      lastName: faker.person.lastName(),
-      address: faker.location.streetAddress(),
-      state: faker.location.state(),
-      city: faker.location.city(),
-      zip: faker.location.zipCode(),
-      phone: faker.phone.number()
-    };
+    const signupPage = new SignupPage();
+    user = signupPage.generaterUserFakerInfo();
   });
 
-  it('Signup user successfully', () => {
+  it('User signs up successfully', () => {
     cy.signup(user);
 
     // Save user fixture
     cy.writeFile('cypress/fixtures/User.json', user);
   });
 
-  it('Logout user successfully after signup', () => {
+  it('User logouts successfully after signup', () => {
     cy.logout();
   });
 
-  it('Login user successfully', () => {
+  it('User logs in successfully', () => {
     cy.login(user.email, user.password);
   });
 
-  it('Logout user successfully after login', () => {
+  it('User logs out successfully after login', () => {
     cy.logout();
   });
 });

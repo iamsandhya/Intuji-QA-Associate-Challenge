@@ -20,16 +20,13 @@ class ProductsPage{
       .find('.productinfo p')
       .should('contain.text', expectedKeyword);
   }
-  clickFirstProduct(){
-    cy.xpath("(//a[contains(text(),'View Product')])[1]").click();
+
+  clickProduct(index){
+    cy.xpath("(//a[contains(text(),'View Product')])")
+    .eq(index)
+    .click();
   }
 
-  // AddToCart() {
-  //   cy.get('.product-image-wrapper').first().trigger('mouseover').within(() => {
-  //     cy.contains('Add to cart').click();
-  //   });
-  //   cy.contains('Continue Shopping').click({ force: true });
-  // }
 }
 
 export default ProductsPage;

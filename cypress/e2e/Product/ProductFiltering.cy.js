@@ -20,7 +20,7 @@ describe('Product Browsing & Filtering ', ()=>{
     cy.get('a[href="/logout"]').should('be.visible');
 
     // Navigate to Productpage
-      cy.verifyproduct(product);
+      cy.verifyproduct(product, 0);
   
 
   });

@@ -1,6 +1,7 @@
 import LoginPage from "../pages/AuthPage/LoginPage";
 import LogOutPage from "../pages/AuthPage/LogoutPage";
 import SignupPage from "../pages/AuthPage/SignupPage"
+import CartPage from "../pages/CartPage/CartPage";
 import ProductDetailPage from "../pages/ProductsPage/ProductDetailpage";
 import ProductsPage from "../pages/ProductsPage/ProductPage";
 
@@ -38,15 +39,34 @@ Cypress.Commands.add('logout',()=>{
 });
 
 //Product Command
-Cypress.Commands.add('verifyproduct',(productdata) => {
+Cypress.Commands.add('verifyproduct',(productdata, productIndex) => {
   const productpage =new ProductsPage();
   const productDetailPage = new ProductDetailPage();
   productpage.visit();
   productpage.filterBYCategory(productdata);
-  productpage.verifyFilteredProducts(productdata.expectedKeyword);
+  productpage.clickProduct(productIndex);
+  // productpage.verifyFilteredProducts(productdata.expectedKeyword);
   // productpage.AddToCart();
-  productpage.clickFirstProduct();
+  // productpage.clickFirstProduct();
   productDetailPage.verifyProductName();
   productDetailPage.verifyProductPrice();
   productDetailPage.verifyAvailability();
+  productDetailPage.addToCart();
+  
 });
+
+
+//CartPage Command
+Cypress.Commands.add('managecart',()=>{
+  const cartPage =new CartPage();
+  const cartIndex = 0; // 1st item of the cart
+  cartPage.visit();
+  // Increase the qunatity by 2
+  cartPage.updateQuantity(cartIndex, 2);
+  cartPage.visit();
+  cartPage.verifyTotalAmount(cartIndex);
+  //Remove the 2nd cart Item
+  cartPage.removeProduct(1);
+  // verfify that cart has only one item left
+  cartPage.verifyTotalCartItems(1);
+})

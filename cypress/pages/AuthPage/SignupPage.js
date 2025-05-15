@@ -1,3 +1,5 @@
+import { faker } from "@faker-js/faker";
+
 class SignupPage {
   visit() {
     cy.visit('/login')
@@ -34,9 +36,25 @@ class SignupPage {
     cy.get('#mobile_number').type(user.phone);
   }
 
-  submit(buttonId) {
+  generaterUserFakerInfo() {
+    return {
+      name: faker.person.firstName(),
+      email: faker.internet.email(),
+      password: faker.internet.password(),
+      firstName: faker.person.firstName(),
+      lastName: faker.person.lastName(),
+      address: faker.location.streetAddress(),
+      state: faker.location.state(),
+      city: faker.location.city(),
+      zip: faker.location.zipCode(),
+      phone: faker.phone.number()
+    }
+  }
+
+  submit(buttonId = 'signup-button') {
     cy.get(`button[data-qa='${buttonId}']`).click();
   }
+
   clickContinue(continuebuttonId){
   cy.get(`a[data-qa='${continuebuttonId}']`).click();
 }
