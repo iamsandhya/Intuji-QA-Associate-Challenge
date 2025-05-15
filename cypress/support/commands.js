@@ -1,6 +1,8 @@
 import LoginPage from "../pages/AuthPage/LoginPage";
 import LogOutPage from "../pages/AuthPage/LogoutPage";
 import SignupPage from "../pages/AuthPage/SignupPage"
+import ProductDetailPage from "../pages/ProductsPage/ProductDetailpage";
+import ProductsPage from "../pages/ProductsPage/ProductPage";
 
 
 
@@ -33,4 +35,18 @@ Cypress.Commands.add('logout',()=>{
   const logoutpage =new LogOutPage();
   logoutpage.visit();
   logoutpage.logoutbutton();
+});
+
+//Product Command
+Cypress.Commands.add('verifyproduct',(productdata) => {
+  const productpage =new ProductsPage();
+  const productDetailPage = new ProductDetailPage();
+  productpage.visit();
+  productpage.filterBYCategory(productdata);
+  productpage.verifyFilteredProducts(productdata.expectedKeyword);
+  // productpage.AddToCart();
+  productpage.clickFirstProduct();
+  productDetailPage.verifyProductName();
+  productDetailPage.verifyProductPrice();
+  productDetailPage.verifyAvailability();
 });

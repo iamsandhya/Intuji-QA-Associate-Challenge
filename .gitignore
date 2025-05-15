@@ -2,3 +2,4 @@ node_modules/
 
 cypress/fixtures/SessionCookies.json
 cypress/fixtures/User.json
+cypress/fixtures/Product.json
