@@ -32,6 +32,14 @@ npm ci installs dependencies strictly as defined in package-lock.json, ensuring 
 ```bash
 npm ci
 ```
+
+### 3️⃣ Installation XPath Selectors in Cypress
+
+Run the following command to install the plugin as a development dependency:
+```bash
+npm install -D cypress-xpath
+```
+
 ### 👉 Run Cypress in Interactive Mode (GUI)
 This opens the Cypress Test Runner, allowing you to run and debug tests interactively
 ```bash
