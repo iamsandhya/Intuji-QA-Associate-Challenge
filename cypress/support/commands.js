@@ -45,9 +45,6 @@ Cypress.Commands.add('verifyproduct',(productdata, productIndex) => {
   productpage.visit();
   productpage.filterBYCategory(productdata);
   productpage.clickProduct(productIndex);
-  // productpage.verifyFilteredProducts(productdata.expectedKeyword);
-  // productpage.AddToCart();
-  // productpage.clickFirstProduct();
   productDetailPage.verifyProductName();
   productDetailPage.verifyProductPrice();
   productDetailPage.verifyAvailability();
