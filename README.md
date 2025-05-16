@@ -44,5 +44,63 @@ Executes all tests via the command line, ideal for CI/CD pipelines.
 npm run cy:run
 ```
 
+### Available custom commands
+```
+signup -> Signs up the user
+
+login -> logs in the user
+
+logout -> logs out the user
+
+verifyproduct -> Goes to product page, filter the product by category based and adds to cart
+
+managecart -> Asserts cart related test cases
+```
+To use: 
+```
+cy.signup();
+cy.login();
+cy.logout();
+cy.verifyproduct();
+cy.managecart();
+```
+
+### 🔮 Future Updates 
+```
+✅  Signup Functionality 
+📌Email Format Validation
+📌Password Length & Strength
+📌Script Injection
+
+✅ Login Functionality
+📌Valid login
+📌Case sensitivity
+📌Login using Enter key
+📌Email Format Validation
+
+✅ Product Browsing & Filtering 
+📌Category Structure Changes
+📌Filter Behavior Improvements
+📌UI & Navigation Updates
+📌Valid login
+
+✅ Cart and Quantity Management 
+📌UI/UX Validations
+📌Negative Testing(Bulk Add to Cart feature testing,out of stock scenarios)
+📌Cart Management Enhancements
+
+✅ Checkout Flow with Fake Payment 
+📌Enter invalid CVV and expire card
+```
+
+## 📄 Test Cases Document
+[📑 Test Cases - Google Sheet]
+
+This test cases is publicly available because I don’t have specific user email to invite for this excel sheet.
+You can find the detailed test cases for all the scenarios in the following Google Sheet:
 
 
+👉 Click here to view the Test Cases
+```
+(https://docs.google.com/spreadsheets/d/1D-yhpwt7sjHZjnrT8FgkO6y9bbkQVtA7ATxK_4-J8Ns/edit?usp=sharing)
+```
