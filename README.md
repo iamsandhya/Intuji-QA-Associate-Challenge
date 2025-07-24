@@ -103,8 +103,6 @@ cy.managecart();
 
 ## 📄 Test Cases Document
 [📑 Test Cases - Google Sheet]
-
-This test cases is publicly available because I don’t have specific user email to invite for this excel sheet.
 You can find the detailed test cases for all the scenarios in the following Google Sheet:
 
 
